@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Personal">
+            <menu>
+                <item
+                    android:id="@+id/nav_pedo"
+                    android:icon="@drawable/ic_feet_footprint"
+                    android:title="Pedometer"
+                />
+                <item
+                    android:id="@+id/nav_bmi"
+                    android:icon="@drawable/ic_measure"
+                    android:title="BMI"/>
+                <item
+                    android:id="@+id/nav_workout"
+                    android:icon="@drawable/ic_dumble"
+                    android:title="HIIT Workout"/>
+            </menu>
+        </item>
+
+    </group>
+
+    <item android:title="Group">
+        <menu>
+            <item
+                android:id="@+id/nav_X"
+                android:icon="@drawable/ic_menu_share"
+                android:title="X" />
+            <item
+                android:id="@+id/nav_Y"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Y" />
+            <item
+                android:id="@+id/nav_Z"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Z" />
+        </menu>
+    </item>
+
+</menu>

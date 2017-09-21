@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NavTrial1</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="heights_arrays">
+        <item>feet</item>
+        <item>cms</item>
+        <item>meters</item>
+    </string-array>
+
+    <string-array name="weight_arrays">
+        <item>kgs</item>
+        <item>pounds</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
