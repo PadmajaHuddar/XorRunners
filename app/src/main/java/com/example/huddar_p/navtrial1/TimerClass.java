@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class TimerClass extends Activity {
 
     TextView displayText;
-    public int seconds = 3;
+    public int seconds = 5;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -47,7 +47,6 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
 
             @Override
             public void onClick(View arg0) {
-
                 numSteps = 0;
                 sensorManager.registerListener(pedometer_activity.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
 
@@ -66,12 +65,11 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
         });
     }
 
-        public boolean onOptionsItemSelected(MenuItem item)
+    public boolean onOptionsItemSelected(MenuItem item)
     {
         if(item.getItemId()==android.R.id.home)
             finish();
         return super.onOptionsItemSelected(item);
-
     }
 
 

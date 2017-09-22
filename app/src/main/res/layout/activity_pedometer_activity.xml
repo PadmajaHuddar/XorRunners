@@ -57,7 +57,8 @@
         android:text="START"
         android:textColor="#ffffff"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/pedoDisplay" />
+        android:layout_toLeftOf="@+id/pedoDisplay"
+        android:onClick="startService"/>
 
     <Button
         android:id="@+id/pedoStop"

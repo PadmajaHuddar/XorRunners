@@ -19,6 +19,7 @@ public class hiit_activity extends AppCompatActivity {
     public static int user_level=0;
     public static int workout_index=0;
     GifImageView myGif;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class hiit_activity extends AppCompatActivity {
         if(getSupportActionBar()!=null)
         {getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);};
+
 
         wk=new WorkOutHelper();
         workoutTask = (TextView)findViewById(R.id.workoutTask);

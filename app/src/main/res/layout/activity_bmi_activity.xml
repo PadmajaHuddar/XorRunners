@@ -24,10 +24,10 @@
         android:id="@+id/spinnerHeight"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/inputWeight"
+        android:entries="@array/heights_arrays"
         android:layout_alignTop="@+id/inputHeight"
-        android:layout_marginLeft="260dp"
-        android:entries="@array/heights_arrays" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/inputWeight"

@@ -10,25 +10,26 @@
     tools:context="com.example.huddar_p.navtrial1.MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="The best way to shed negative energy"
-        android:textAlignment="center"
-        android:textSize="50dp"
-        android:layout_alignParentTop="true"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif1"
+        android:layout_marginTop="100dp"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:src="@drawable/running_man_gif"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text='"RUN"'
-        android:textSize="80dp"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="XoЯRunners"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
 </RelativeLayout>
