@@ -10,14 +10,7 @@
     tools:context="com.example.huddar_p.navtrial1.MainActivity">
 
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif1"
-        android:layout_marginTop="100dp"
-        android:layout_width="500dp"
-        android:layout_height="500dp"
-        android:src="@drawable/running_man_gif"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:id="@+id/textView2"

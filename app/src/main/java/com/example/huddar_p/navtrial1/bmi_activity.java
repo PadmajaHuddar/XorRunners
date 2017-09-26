@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class bmi_activity extends AppCompatActivity {
 
@@ -38,38 +39,48 @@ public class bmi_activity extends AppCompatActivity {
     }
 
     public void onButtonClick(View v){
+
         EditText e_height = (EditText)findViewById(R.id.inputHeight);
         EditText e_weight = (EditText)findViewById(R.id.inputWeight);
         TextView result = (TextView)findViewById(R.id.resultBMI);
 
-        float height = Float.parseFloat(e_height.getText().toString());
-        float weight = Float.parseFloat(e_weight.getText().toString());
-        float height_meters;
-        float weight_kgs;
-        switch(spinnerHeight.getSelectedItem().toString())
+        if(e_height.getText().length()==0 || e_weight.getText().length()==0 )
         {
-            case "feet": height_meters = height * 0.3048f;
-                         break;
-            case "cms": height_meters = height/100;
-                        break;
-            case "meter": height_meters = height;
-                        break;
-            default : height_meters = height;
-                        break;
+            Toast.makeText(this,"Please fill in all the details",Toast.LENGTH_SHORT).show();
+        }
+        else{
+
+            float height = Float.parseFloat(e_height.getText().toString());
+            float weight = Float.parseFloat(e_weight.getText().toString());
+            float height_meters;
+            float weight_kgs;
+            switch(spinnerHeight.getSelectedItem().toString())
+            {
+                case "feet": height_meters = height * 0.3048f;
+                    break;
+                case "cms": height_meters = height/100;
+                    break;
+                case "meter": height_meters = height;
+                    break;
+                default : height_meters = height;
+                    break;
+
+            }
+            switch(spinnerWeight.getSelectedItem().toString())
+            {
+                case "kgs": weight_kgs = weight;
+                    break;
+                case "pounds": weight_kgs = weight*0.453592f;
+                    break;
+
+                default : weight_kgs = weight;
+                    break;
+            }
+            float bmi = weight_kgs/(height_meters*height_meters);
+            result.setText("YOUR BMI is "+bmi);
 
         }
-        switch(spinnerWeight.getSelectedItem().toString())
-        {
-            case "kgs": weight_kgs = weight;
-                break;
-            case "pounds": weight_kgs = weight*0.453592f;
-                break;
 
-            default : weight_kgs = weight;
-                break;
-        }
-        float bmi = weight_kgs/(height_meters*height_meters);
-        result.setText("YOUR BMI is "+bmi);
 
     }
 }

@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
+
 
 public class pedometer_activity extends AppCompatActivity implements SensorEventListener, StepListener {
 
@@ -21,7 +23,7 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
     private Sensor accel;
 
     //private static final String TEXT_NUM_STEPS = "Number of Steps: ";
-    private int numSteps;
+    private static int numSteps;
     private float calories_burnt,distance_walked_kms;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
 
             @Override
             public void onClick(View arg0) {
-                numSteps = 0;
+
                 sensorManager.registerListener(pedometer_activity.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
 
             }
@@ -60,7 +62,7 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
             public void onClick(View arg0) {
 
                 sensorManager.unregisterListener(pedometer_activity.this);
-
+                numSteps = 0;
             }
         });
     }
@@ -71,7 +73,6 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
             finish();
         return super.onOptionsItemSelected(item);
     }
-
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -92,7 +93,7 @@ public class pedometer_activity extends AppCompatActivity implements SensorEvent
         distance_walked_kms = numSteps/1312.33595801f;
        // String distance= Double.toString(num)
         pedoCalories.setText(Float.toString(calories_burnt));
-        pedoDistance.setText(distance_walked_kms+" kms");
+        pedoDistance.setText(String.format(" %.2f kms",distance_walked_kms));
         pedoDisplay.setText(Integer.toString(numSteps));
     }
 }
