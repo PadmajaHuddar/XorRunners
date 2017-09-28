@@ -3,6 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/userr"
+            android:title="Profile"/>
         <item android:title="Personal">
             <menu>
                 <item
@@ -18,26 +22,31 @@
                     android:id="@+id/nav_workout"
                     android:icon="@drawable/ic_dumble"
                     android:title="HIIT Workout"/>
+                <!--<item-->
+                    <!--android:id="@+id/nav_water"-->
+                    <!--android:icon="@drawable/water"-->
+                    <!--android:title="Water Intake"-->
+                    <!--/>-->
             </menu>
         </item>
 
     </group>
 
-    <item android:title="Group">
-        <menu>
-            <item
-                android:id="@+id/nav_X"
-                android:icon="@drawable/ic_menu_share"
-                android:title="X" />
-            <item
-                android:id="@+id/nav_Y"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Y" />
-            <item
-                android:id="@+id/nav_Z"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Z" />
-        </menu>
-    </item>
+    <!--<item android:title="Group">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_X"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="X" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_Y"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Y" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_Z"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Z" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

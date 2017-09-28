@@ -8,24 +8,25 @@
 
     <EditText
         android:id="@+id/workoutDuration"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="86dp"
         android:ems="10"
-        android:hint="Height"
+        android:hint="Workout Duration"
         android:inputType="number|numberDecimal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Spinner
         android:id="@+id/workoutSpinner"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:entries="@array/heights_arrays"
         android:layout_alignBaseline="@+id/workoutDuration"
         android:layout_alignBottom="@+id/workoutDuration"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toEndOf="@+id/workoutDuration"
+        android:entries="@array/workout_duration_arrays" />
 
     <EditText
         android:id="@+id/weight"
@@ -37,31 +38,32 @@
         android:inputType="number|numberDecimal"
         android:layout_below="@+id/workoutDuration"
         android:layout_alignLeft="@+id/workoutDuration"
-        android:layout_alignStart="@+id/workoutDuration" />
+        android:layout_alignStart="@+id/workoutDuration"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp" />
 
     <Spinner
-        android:id="@+id/spinnerWeight"
-        android:layout_width="150dp"
+        android:id="@+id/weightSpinner"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:entries="@array/weight_arrays"
         android:layout_alignBaseline="@+id/weight"
         android:layout_alignBottom="@+id/weight"
         android:layout_alignLeft="@+id/workoutSpinner"
         android:layout_alignStart="@+id/workoutSpinner"
         android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" />+
+        android:layout_marginStart="8dp"
+        android:entries="@array/weight_arrays" />+
 
     <Button
         android:id="@+id/buttonWaterIntake"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/mybutton"
-        android:onClick="onButtonClick"
-        android:text="Calculate BMI"
-        android:layout_marginTop="73dp"
         android:layout_below="@+id/weight"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="73dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onButtonClick"
+        android:text="Calculate Water Intake" />
 
     <TextView
         android:id="@+id/resultBMI"
@@ -73,25 +75,35 @@
         android:textSize="30dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/workoutDuration"
-        android:layout_toStartOf="@+id/weight"
-        android:layout_marginLeft="12dp"
-        app:srcCompat="@drawable/height"
-        android:layout_above="@+id/weight" />
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/weight"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_above="@+id/buttonWaterIntake"
         android:layout_toLeftOf="@+id/weight"
         android:layout_toStartOf="@+id/weight"
         android:layout_alignTop="@+id/weight" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/timer"
+        android:layout_above="@+id/weight"
+        android:layout_toLeftOf="@+id/buttonWaterIntake"
+        android:layout_toStartOf="@+id/buttonWaterIntake" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/resultBMI"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView3" />
 
 
 </RelativeLayout>

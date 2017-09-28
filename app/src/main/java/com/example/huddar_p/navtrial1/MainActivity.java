@@ -96,13 +96,15 @@ public class MainActivity extends AppCompatActivity
             Intent nextPage= new Intent(MainActivity.this, hiit_activity.class);
             startActivity(nextPage);
         }
-        else if (id == R.id.nav_X) {
-
-        } else if (id == R.id.nav_Y) {
-
-        } else if (id == R.id.nav_Z) {
+        else if (id == R.id.nav_profile) {
+            Intent nextPage= new Intent(MainActivity.this,UserProfile.class);
+            startActivity(nextPage);
 
         }
+//        else if (id == R.id.nav_water) {
+//            Intent nextPage= new Intent(MainActivity.this,WaterIntake.class);
+//            startActivity(nextPage);
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

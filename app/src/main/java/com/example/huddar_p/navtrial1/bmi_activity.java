@@ -18,7 +18,7 @@ public class bmi_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi_activity);
 
-        spinnerHeight = (Spinner)findViewById(R.id.spinnerHeight);
+        spinnerHeight = (Spinner)findViewById(R.id.workoutSpinner);
         ArrayAdapter adapter_height = ArrayAdapter.createFromResource(this,R.array.heights_arrays,android.R.layout.simple_spinner_item);
         spinnerHeight.setAdapter(adapter_height);
 
@@ -40,8 +40,8 @@ public class bmi_activity extends AppCompatActivity {
 
     public void onButtonClick(View v){
 
-        EditText e_height = (EditText)findViewById(R.id.inputHeight);
-        EditText e_weight = (EditText)findViewById(R.id.inputWeight);
+        EditText e_height = (EditText)findViewById(R.id.workoutDuration);
+        EditText e_weight = (EditText)findViewById(R.id.weight);
         TextView result = (TextView)findViewById(R.id.resultBMI);
 
         if(e_height.getText().length()==0 || e_weight.getText().length()==0 )
